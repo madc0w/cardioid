@@ -1,0 +1,82 @@
+<html>
+
+	<head>
+		<title>Cardiod</title>
+		<script type="text/javascript" src="plot.js"></script>
+		<style type="text/css">
+			body {
+				font-family: Arial;
+			}
+
+			input {
+				width: 60px;
+			}
+
+			td {
+				vertical-align: top;
+			}
+
+			#plot-container {
+				padding: 10px;
+				margin: auto;
+				margin-top: 40px;
+				background-color: #aff;
+				border-radius: 12px;
+				width: 800px;
+			}
+
+			#video-container {
+				padding-left: 20px;
+			}
+
+			button {
+				font-size: 20px;
+				font-weight: bold;
+				background-color: #0a8;
+				padding: 10px;
+				border-radius: 8px;
+				width: 100px;
+			}
+
+		</style>
+	</head>
+
+	<body onLoad="onLoad();">
+		<div id="plot-container">
+			<canvas id="plot" width="800" height="800"></canvas>
+			<br />
+			<div id="controls">
+				<table>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td>Num points</td>
+									<td><input type="text" id="max-field" /></td>
+								</tr>
+								<tr>
+									<td>Increment</td>
+									<td><input type="text" id="increment-field" /></td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<button id="pause-button" onClick="togglePause();">Pause</button>
+										<button id="reset-button" onClick="reset();">Reset</button>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<button id="apply-button" onClick="applyParams();">Apply Params</button>
+						</td>
+						<td id="video-container">
+							Mathologer explains all<br />
+							<iframe width="240" src="https://www.youtube.com/embed/qhbuKbxJsk8" frameborder="0" allowfullscreen></iframe>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+
+</html>
